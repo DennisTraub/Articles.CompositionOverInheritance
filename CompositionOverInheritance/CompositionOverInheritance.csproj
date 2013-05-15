@@ -30,6 +30,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.6.2.12296, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.2.6.2\lib\nunit.framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -39,9 +42,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="1 - Inheritance\Auto.cs" />
+    <Compile Include="1 - Inheritance\Fahrrad.cs" />
+    <Compile Include="1 - Inheritance\Fahrzeug.cs" />
+    <Compile Include="1 - Inheritance\MotorisiertesFahrzeug.cs" />
+    <Compile Include="2 - Interface\Auto.cs" />
+    <Compile Include="2 - Interface\Fahrrad.cs" />
+    <Compile Include="2 - Interface\IFahrzeug.cs" />
+    <Compile Include="2 - Interface\IMotorisiert.cs" />
+    <Compile Include="2 - Interface\Pedelec.cs" />
+    <Compile Include="1 - Inheritance\_Tests.cs" />
+    <Compile Include="1 - Inheritance\Pedelec.cs" />
+    <Compile Include="2 - Interface\_Tests.cs" />
+    <Compile Include="3 - Composition\Auto.cs" />
+    <Compile Include="3 - Composition\Fahrrad.cs" />
+    <Compile Include="3 - Composition\Fahrzeug.cs" />
+    <Compile Include="3 - Composition\IFahrzeug.cs" />
+    <Compile Include="3 - Composition\IMotor.cs" />
+    <Compile Include="3 - Composition\_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
