@@ -4,7 +4,7 @@ namespace CompositionOverInheritance._1___Inheritance
     {
         private bool motorLäuft;
 
-        public void Starte()
+        public virtual void Starte()
         {
             this.motorLäuft = true;
         }

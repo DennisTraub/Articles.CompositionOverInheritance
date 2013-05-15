@@ -2,6 +2,9 @@
 {
     public class Fahrrad : Fahrzeug
     {
-        
+        public Fahrrad()
+        {
+            Höchstgeschwindigkeit = 30;
+        }
     }
 }

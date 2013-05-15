@@ -2,6 +2,9 @@
 {
     public class Auto : MotorisiertesFahrzeug
     {
-
+        public Auto()
+        {
+            Höchstgeschwindigkeit = 180;
+        }
     }
 }
