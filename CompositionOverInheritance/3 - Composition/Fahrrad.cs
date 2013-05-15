@@ -11,7 +11,6 @@
 
         public void Beschleunige(int geschwindigkeit)
         {
-            // Delegation
             fahrzeug.Beschleunige(geschwindigkeit);
         }
     }

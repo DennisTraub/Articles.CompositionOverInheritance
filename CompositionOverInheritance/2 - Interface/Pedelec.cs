@@ -4,7 +4,9 @@ namespace CompositionOverInheritance._2___Interface
     public class Pedelec : IFahrzeug, IMotor
     {
         protected int höchstgeschwindigkeit = 30;
+        
         public int Geschwindigkeit { get; private set; }
+
         public bool MotorLäuft { get; private set; }
 
         public void Beschleunige(int geschwindigkeit)
