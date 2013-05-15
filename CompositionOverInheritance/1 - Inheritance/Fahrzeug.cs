@@ -3,12 +3,12 @@ namespace CompositionOverInheritance._1___Inheritance
     public abstract class Fahrzeug
     {
         public int Geschwindigkeit { get; protected set; }
-        public int Höchstgeschwindigkeit { get; protected set; }
+        protected int höchstgeschwindigkeit;
 
         public virtual void Beschleunige(int geschwindigkeit)
         {
-            if ( geschwindigkeit > Höchstgeschwindigkeit )
-                Geschwindigkeit = Höchstgeschwindigkeit;
+            if ( geschwindigkeit > höchstgeschwindigkeit )
+                Geschwindigkeit = höchstgeschwindigkeit;
             else
                 Geschwindigkeit = geschwindigkeit;
         }

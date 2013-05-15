@@ -5,13 +5,13 @@ namespace CompositionOverInheritance._1___Inheritance
     {
         public Pedelec()
         {
-            Höchstgeschwindigkeit = 30;
+            höchstgeschwindigkeit = 30;
         }
 
         public override void Beschleunige(int geschwindigkeit)
         {
-            if (geschwindigkeit > Höchstgeschwindigkeit)
-                Geschwindigkeit = Höchstgeschwindigkeit;
+            if (geschwindigkeit > höchstgeschwindigkeit)
+                Geschwindigkeit = höchstgeschwindigkeit;
             else
                 Geschwindigkeit = geschwindigkeit;
         }
@@ -19,7 +19,7 @@ namespace CompositionOverInheritance._1___Inheritance
         public override void Starte()
         {
             base.Starte();
-            Höchstgeschwindigkeit = 40;
+            höchstgeschwindigkeit = 40;
         }
     }
 }

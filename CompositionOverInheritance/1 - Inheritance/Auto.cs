@@ -4,7 +4,7 @@
     {
         public Auto()
         {
-            Höchstgeschwindigkeit = 180;
+            höchstgeschwindigkeit = 180;
         }
     }
 }

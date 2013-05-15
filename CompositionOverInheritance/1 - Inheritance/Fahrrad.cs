@@ -4,7 +4,7 @@
     {
         public Fahrrad()
         {
-            Höchstgeschwindigkeit = 30;
+            höchstgeschwindigkeit = 30;
         }
     }
 }

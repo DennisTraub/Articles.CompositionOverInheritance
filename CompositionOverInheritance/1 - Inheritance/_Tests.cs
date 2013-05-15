@@ -7,119 +7,70 @@ namespace CompositionOverInheritance._1___Inheritance
     public class EinFahrrad
     {
         [Test]
-        public void KannBeschleunigen()
+        public void KannBis30KmhBeschleunigen()
         {
             var fahrrad = new Fahrrad();
+
             fahrrad.Beschleunige(20);
             Assert.AreEqual(20, fahrrad.Geschwindigkeit);
+
+            fahrrad.Beschleunige(100);
+            Assert.AreEqual(30, fahrrad.Geschwindigkeit);
         }
     }
 
     [TestFixture]
-    public class EinAutoDasNichtGestartetWurde
+    public class EinAuto
     {
         [Test]
-        public void KannNichtBeschleunigen()
+        public void NichtGestartet_KannNichtBeschleunigen()
         {
             var auto = new Auto();
+
             auto.Beschleunige(120);
             Assert.AreEqual(0, auto.Geschwindigkeit);
         }
-    }
 
-    [TestFixture]
-    public class EinAutoDasGestartetWurde
-    {
         [Test]
-        public void KannBeschleunigen()
+        public void Gestartet_KannBis180KmhBeschleunigen()
         {
             var auto = new Auto();
             auto.Starte();
+
             auto.Beschleunige(120);
             Assert.AreEqual(120, auto.Geschwindigkeit);
-        }
-    }
 
-    [TestFixture]
-    public class EinPedelecDasGestartetWurde
-    {
-        [Test]
-        public void KannBeschleunigen()
-        {
-            var pedelec = new Pedelec();
-            pedelec.Starte();
-            pedelec.Beschleunige(20);
-            Assert.AreEqual(20, pedelec.Geschwindigkeit);
-        }
-    }
-
-    [TestFixture]
-    public class EinPedelecDasNichtGestartetWurde
-    {
-        [Test]
-        public void KannBeschleunigen()
-        {
-            var pedelec = new Pedelec();
-            pedelec.Beschleunige(20);
-            Assert.AreEqual(20, pedelec.Geschwindigkeit);
-        }
-    }
-
-    [TestFixture]
-    public class EinFahrradHatEineHöchstgeschwindigkeit
-    {
-        [Test]
-        public void DieNichtÜberschrittenWerdenKann()
-        {
-            var fahrrad = new Fahrrad();
-            fahrrad.Beschleunige(100);
-            var höchstgeschwindigkeit = fahrrad.Höchstgeschwindigkeit;
-            Assert.AreEqual(höchstgeschwindigkeit, fahrrad.Geschwindigkeit);
-        }
-    }
-
-    [TestFixture]
-    public class EinAutoHatEineHöchstgeschwindigkeit
-    {
-        [Test]
-        public void DieNichtÜberschrittenWerdenKann()
-        {
-            var auto = new Auto();
-            auto.Starte();
             auto.Beschleunige(250);
-            var höchstgeschwindigkeit = auto.Höchstgeschwindigkeit;
-            Assert.AreEqual(höchstgeschwindigkeit, auto.Geschwindigkeit);
+            Assert.AreEqual(180, auto.Geschwindigkeit);
         }
     }
 
     [TestFixture]
-    public class EinPedelecHatEineHöchstgeschwindigkeit
+    public class EinPedelec
     {
         [Test]
-        public void DieNichtÜberschrittenWerdenKann()
+        public void NichtGestartet_KannBis30KmhBeschleunigen()
         {
             var pedelec = new Pedelec();
-            var höchstgeschwindigkeit = pedelec.Höchstgeschwindigkeit;
-            Assert.AreEqual(30, höchstgeschwindigkeit);
 
-            pedelec.Beschleunige(50);
-            Assert.AreEqual(höchstgeschwindigkeit, pedelec.Geschwindigkeit);
+            pedelec.Beschleunige(20);
+            Assert.AreEqual(20, pedelec.Geschwindigkeit);
+
+            pedelec.Beschleunige(100);
+            Assert.AreEqual(30, pedelec.Geschwindigkeit);
         }
-    }
 
-    [TestFixture]
-    public class EinGestartetesPedelec
-    {
         [Test]
-        public void HatEineAndereHöchstgeschwindigkeit()
+        public void Gestartet_KannBis40KmhBeschleunigen()
         {
             var pedelec = new Pedelec();
             pedelec.Starte();
-            var höchstgeschwindigkeit = pedelec.Höchstgeschwindigkeit;
-            Assert.AreEqual(40, höchstgeschwindigkeit);
 
-            pedelec.Beschleunige(50);
-            Assert.AreEqual(höchstgeschwindigkeit, pedelec.Geschwindigkeit);
+            pedelec.Beschleunige(20);
+            Assert.AreEqual(20, pedelec.Geschwindigkeit);
+
+            pedelec.Beschleunige(100);
+            Assert.AreEqual(40, pedelec.Geschwindigkeit);
         }
     }
 }
