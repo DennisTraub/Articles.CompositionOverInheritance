@@ -2,11 +2,16 @@
 {
     internal class Fahrzeug : IFahrzeug
     {
-        public int Geschwindigkeit { get; private set; }
+        private int geschwindigkeit = 0;
+
+        public int Geschwindigkeit()
+        {
+            return geschwindigkeit;
+        }
 
         public void Beschleunige(int geschwindigkeit)
         {
-            Geschwindigkeit = geschwindigkeit;
+            this.geschwindigkeit = geschwindigkeit;
         }
     }
 }

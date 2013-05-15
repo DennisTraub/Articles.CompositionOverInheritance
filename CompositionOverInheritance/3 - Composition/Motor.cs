@@ -2,10 +2,16 @@
 {
     internal class Motor : IMotor
     {
-        public bool MotorLäuft { get; private set; }
+        private bool motorLäuft = false;
+
+        public bool MotorLäuft()
+        {
+            return motorLäuft;
+        }
+
         public void Starte()
         {
-            MotorLäuft = true;
+            this.motorLäuft = true;
         }
     }
 }

@@ -4,13 +4,14 @@
     {
         private readonly IFahrzeug fahrzeug = new Fahrzeug();
 
-        public int Geschwindigkeit
+        public int Geschwindigkeit()
         {
-            get { return fahrzeug.Geschwindigkeit; }
+            return fahrzeug.Geschwindigkeit();
         }
 
         public void Beschleunige(int geschwindigkeit)
         {
+            // Delegation
             fahrzeug.Beschleunige(geschwindigkeit);
         }
     }

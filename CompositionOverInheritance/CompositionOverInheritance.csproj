@@ -59,6 +59,8 @@
     <Compile Include="3 - Composition\Fahrzeug.cs" />
     <Compile Include="3 - Composition\IFahrzeug.cs" />
     <Compile Include="3 - Composition\IMotor.cs" />
+    <Compile Include="3 - Composition\Motor.cs" />
+    <Compile Include="3 - Composition\Pedelec.cs" />
     <Compile Include="3 - Composition\_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -1,6 +1,6 @@
 ﻿namespace CompositionOverInheritance._3___Composition
 {
-    public class Auto : IFahrzeug, IMotor
+    public class Pedelec : IFahrzeug, IMotor
     {
         private readonly IFahrzeug fahrzeug = new Fahrzeug();
         private readonly IMotor motor = new Motor();
@@ -17,10 +17,9 @@
 
         public void Beschleunige(int geschwindigkeit)
         {
-            if (MotorLäuft())
-                fahrzeug.Beschleunige(geschwindigkeit);
+            fahrzeug.Beschleunige(geschwindigkeit);
         }
-        
+
         public void Starte()
         {
             motor.Starte();
