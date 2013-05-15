@@ -48,8 +48,7 @@
     <Compile Include="1 - Inheritance\MotorisiertesFahrzeug.cs" />
     <Compile Include="2 - Interface\Auto.cs" />
     <Compile Include="2 - Interface\Fahrrad.cs" />
-    <Compile Include="2 - Interface\IFahrzeug.cs" />
-    <Compile Include="2 - Interface\IMotorisiert.cs" />
+    <Compile Include="2 - Interface\Interfaces.cs" />
     <Compile Include="2 - Interface\Pedelec.cs" />
     <Compile Include="1 - Inheritance\_Tests.cs" />
     <Compile Include="1 - Inheritance\Pedelec.cs" />
@@ -57,8 +56,6 @@
     <Compile Include="3 - Composition\Auto.cs" />
     <Compile Include="3 - Composition\Fahrrad.cs" />
     <Compile Include="3 - Composition\Fahrzeug.cs" />
-    <Compile Include="3 - Composition\IFahrzeug.cs" />
-    <Compile Include="3 - Composition\IMotor.cs" />
     <Compile Include="3 - Composition\Motor.cs" />
     <Compile Include="3 - Composition\Pedelec.cs" />
     <Compile Include="3 - Composition\_Tests.cs" />

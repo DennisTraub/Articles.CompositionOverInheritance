@@ -2,7 +2,7 @@
 {
     public class Pedelec : IFahrzeug, IMotor
     {
-        private IFahrzeug fahrzeug = new Fahrzeug(30);
+        private IFahrzeug fahrzeug = new Fahrrad();
         private readonly IMotor motor = new Motor();
 
         public int Geschwindigkeit()

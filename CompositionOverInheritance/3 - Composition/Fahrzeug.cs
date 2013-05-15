@@ -1,5 +1,11 @@
 ﻿namespace CompositionOverInheritance._3___Composition
 {
+    public interface IFahrzeug
+    {
+        int Geschwindigkeit();
+        void Beschleunige(int geschwindigkeit);
+    }
+
     internal class Fahrzeug : IFahrzeug
     {
         private int geschwindigkeit = 0;

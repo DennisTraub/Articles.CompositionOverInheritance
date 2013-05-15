@@ -1,6 +1,6 @@
 namespace CompositionOverInheritance._2___Interface
 {
-    public class Auto : IFahrzeug, IMotorisiert
+    public class Auto : IFahrzeug, IMotor
     {
         protected int höchstgeschwindigkeit = 180;
         public int Geschwindigkeit { get; private set; }
