@@ -3,6 +3,12 @@
     internal class Fahrzeug : IFahrzeug
     {
         private int geschwindigkeit = 0;
+        private readonly int höchstgeschwindigkeit;
+
+        public Fahrzeug(int höchstgeschwindigkeit)
+        {
+            this.höchstgeschwindigkeit = höchstgeschwindigkeit;
+        }
 
         public int Geschwindigkeit()
         {
@@ -11,7 +17,10 @@
 
         public void Beschleunige(int geschwindigkeit)
         {
-            this.geschwindigkeit = geschwindigkeit;
+            if (geschwindigkeit > höchstgeschwindigkeit)
+                this.geschwindigkeit = höchstgeschwindigkeit;
+            else
+                this.geschwindigkeit = geschwindigkeit;
         }
     }
 }

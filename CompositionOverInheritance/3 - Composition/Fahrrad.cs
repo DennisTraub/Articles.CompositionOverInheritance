@@ -2,7 +2,7 @@
 {
     public class Fahrrad : IFahrzeug
     {
-        private readonly IFahrzeug fahrzeug = new Fahrzeug();
+        private readonly IFahrzeug fahrzeug = new Fahrzeug(30);
 
         public int Geschwindigkeit()
         {

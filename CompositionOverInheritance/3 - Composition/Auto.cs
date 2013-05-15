@@ -2,7 +2,7 @@
 {
     public class Auto : IFahrzeug, IMotor
     {
-        private readonly IFahrzeug fahrzeug = new Fahrzeug();
+        private readonly IFahrzeug fahrzeug = new Fahrzeug(180);
         private readonly IMotor motor = new Motor();
 
         public int Geschwindigkeit()

@@ -2,7 +2,7 @@
 {
     public class Pedelec : IFahrzeug, IMotor
     {
-        private readonly IFahrzeug fahrzeug = new Fahrzeug();
+        private IFahrzeug fahrzeug = new Fahrzeug(30);
         private readonly IMotor motor = new Motor();
 
         public int Geschwindigkeit()
@@ -23,6 +23,7 @@
         public void Starte()
         {
             motor.Starte();
+            fahrzeug = new Fahrzeug(40);
         }
     }
 }
