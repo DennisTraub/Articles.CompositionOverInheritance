@@ -3,10 +3,7 @@ namespace CompositionOverInheritance._1___Inheritance
 {
     public class Pedelec : MotorisiertesFahrzeug
     {
-        public Pedelec()
-        {
-            höchstgeschwindigkeit = 30;
-        }
+        public Pedelec() : base(30) {}
 
         public override void Beschleunige(int geschwindigkeit)
         {

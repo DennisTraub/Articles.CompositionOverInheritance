@@ -4,6 +4,9 @@ namespace CompositionOverInheritance._1___Inheritance
     {
         private bool motorLäuft;
 
+        protected MotorisiertesFahrzeug(int höchstgeschwindigkeit)
+            : base(höchstgeschwindigkeit) {}
+
         public virtual void Starte()
         {
             this.motorLäuft = true;
