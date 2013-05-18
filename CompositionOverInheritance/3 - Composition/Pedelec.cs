@@ -2,8 +2,14 @@
 {
     public class Pedelec : IFahrzeug, IMotor
     {
-        private IFahrzeug fahrzeug = new Fahrrad();
+        private IFahrzeug fahrzeug = new Fahrrad(new Fahrzeug(30));
         private readonly IMotor motor = new Motor();
+
+        public Pedelec(IFahrzeug fahrzeug, IMotor motor)
+        {
+            this.fahrzeug = fahrzeug;
+            this.motor = motor;
+        }
 
         public int Geschwindigkeit()
         {

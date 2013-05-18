@@ -2,8 +2,14 @@
 {
     public class Auto : IFahrzeug, IMotor
     {
-        private readonly IFahrzeug fahrzeug = new Fahrzeug(180);
-        private readonly IMotor motor = new Motor();
+        private readonly IFahrzeug fahrzeug;
+        private readonly IMotor motor;
+
+        public Auto(IFahrzeug fahrzeug, IMotor motor)
+        {
+            this.fahrzeug = fahrzeug;
+            this.motor = motor;
+        }
 
         public int Geschwindigkeit()
         {
