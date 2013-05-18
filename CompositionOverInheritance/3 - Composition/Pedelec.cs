@@ -2,8 +2,8 @@
 {
     public class Pedelec : IFahrzeug, IMotor
     {
-        private IFahrzeug fahrzeug = new Fahrrad(new Fahrzeug(30));
-        private readonly IMotor motor = new Motor();
+        private IFahrzeug fahrzeug;
+        private readonly IMotor motor;
 
         public Pedelec(IFahrzeug fahrzeug, IMotor motor)
         {
@@ -29,7 +29,7 @@
         public void Starte()
         {
             motor.Starte();
-            fahrzeug = new Fahrzeug(40);
+            fahrzeug = new Fahrzeug().MitHöchstgeschwindigkeit(40);
         }
     }
 }

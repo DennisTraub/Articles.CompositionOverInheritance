@@ -1,7 +1,7 @@
 ﻿
 namespace CompositionOverInheritance._1___Inheritance
 {
-    public class Pedelec : MotorisiertesFahrzeug
+    public class Pedelec : Kraftfahrzeug
     {
         public Pedelec() : base(30) {}
 

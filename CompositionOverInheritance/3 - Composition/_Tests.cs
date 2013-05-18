@@ -9,7 +9,7 @@ namespace CompositionOverInheritance._3___Composition
         [Test]
         public void KannBis30KmhBeschleunigen()
         {
-            IFahrzeug fahrzeug = new Fahrzeug(30);
+            IFahrzeug fahrzeug = new Fahrzeug().MitHöchstgeschwindigkeit(30);
             var fahrrad = new Fahrrad(fahrzeug);
 
             fahrrad.Beschleunige(20);
@@ -29,7 +29,7 @@ namespace CompositionOverInheritance._3___Composition
         [SetUp]
         public void Setup()
         {
-            fahrzeug = new Fahrzeug(180);
+            fahrzeug = new Fahrzeug().MitHöchstgeschwindigkeit(180);
             motor = new Motor();
         }
 
@@ -59,13 +59,13 @@ namespace CompositionOverInheritance._3___Composition
     [TestFixture]
     public class EinPedelec
     {
-        private IFahrzeug fahrrad = new Fahrrad(new Fahrzeug(30));
-        private IMotor motor = new Motor();
+        private IFahrzeug fahrrad;
+        private IMotor motor;
 
         [SetUp]
         public void Setup()
         {
-            var fahrzeug = new Fahrzeug(30);
+            var fahrzeug = new Fahrzeug().MitHöchstgeschwindigkeit(30);
             fahrrad = new Fahrrad(fahrzeug);
             motor = new Motor();
         }

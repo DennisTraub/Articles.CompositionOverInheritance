@@ -8,13 +8,8 @@
 
     internal class Fahrzeug : IFahrzeug
     {
-        private int geschwindigkeit = 0;
-        private readonly int höchstgeschwindigkeit;
-
-        public Fahrzeug(int höchstgeschwindigkeit)
-        {
-            this.höchstgeschwindigkeit = höchstgeschwindigkeit;
-        }
+        private int geschwindigkeit;
+        private int höchstgeschwindigkeit;
 
         public int Geschwindigkeit()
         {
@@ -27,6 +22,12 @@
                 this.geschwindigkeit = höchstgeschwindigkeit;
             else
                 this.geschwindigkeit = geschwindigkeit;
+        }
+
+        public IFahrzeug MitHöchstgeschwindigkeit(int höchstgeschwindigkeit)
+        {
+            this.höchstgeschwindigkeit = höchstgeschwindigkeit;
+            return this;
         }
     }
 }
