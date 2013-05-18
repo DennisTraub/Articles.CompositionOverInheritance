@@ -1,10 +1,10 @@
 namespace CompositionOverInheritance._1___Inheritance
 {
-    public abstract class MotorisiertesFahrzeug : Fahrzeug
+    public abstract class Kraftfahrzeug : Fahrzeug
     {
         private bool motorLäuft;
 
-        protected MotorisiertesFahrzeug(int höchstgeschwindigkeit)
+        protected Kraftfahrzeug(int höchstgeschwindigkeit)
             : base(höchstgeschwindigkeit) {}
 
         public virtual void Starte()

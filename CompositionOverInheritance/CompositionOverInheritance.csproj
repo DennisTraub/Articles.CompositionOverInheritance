@@ -46,7 +46,7 @@
     <Compile Include="1 - Inheritance\Auto.cs" />
     <Compile Include="1 - Inheritance\Fahrrad.cs" />
     <Compile Include="1 - Inheritance\Fahrzeug.cs" />
-    <Compile Include="1 - Inheritance\MotorisiertesFahrzeug.cs" />
+    <Compile Include="1 - Inheritance\Kraftfahrzeug.cs" />
     <Compile Include="2 - Interface\Auto.cs" />
     <Compile Include="2 - Interface\Fahrrad.cs" />
     <Compile Include="2 - Interface\Interfaces.cs" />
